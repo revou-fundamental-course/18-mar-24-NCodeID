@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio Website</title>
+    <!-- import css / link / js -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="navbar-container">
+        <img src="assets/img/person.jpeg" alt="logo" width="50" height="50" />
+        <ul class="list-wrapper">
+          <li class="list-item"><a href="#home">Home</a></li>
+          <li class="list-item"><a href="#our_packages">Our Package</a></li>
+          <li class="list-item"><a href="#call_us">Call Us</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <div class="navbar-handphone" id="mobile-glass">
+      <h2>Menu</h2>
+      <a href="#home">Home</a>
+      <a href="#our_packages">Our Packages</a>
+      <a href="#call_us">Call Us</a>
+    </div>
+    <main>
+      <section class="page-title">
+        <h1>Your Trusted Travel Agent's</h1>
+        <p id="home">Your happiness is our happiness</p>
+      </section>
+      <section class="home-container">
+        <div class="left-container">
+          <div class="banner-container" data-autoplay="true">
+            <div class="arrow arrow-left" onclick="prev()">
+              <box-icon
+                name="left-arrow-circle"
+                type="solid"
+                color="#070707"
+              ></box-icon>
+            </div>
+            <img src="/assets/img/place.jpg" alt="banner" class="slide" />
+            <img src="/assets/img/place1.jpg" alt="banner" class="slide" />
+            <img src="/assets/img/place2.jpg" alt="banner" class="slide" />
+            <div class="arrow arrow-right" onclick="next()">
+              <box-icon
+                name="right-arrow-circle"
+                type="solid"
+                color="#070707"
+              ></box-icon>
+            </div>
+            <div class="dots_container" id="indicator"></div>
+          </div>
+          <span class="quotes">
+            &#34;Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Nulla, quia delectus dolorum amet sed aspernatur animi ab expedita.
+            Totam, enim.&#34;</span
+          >
+          <div class="user">
+            <img
+              src="assets/img/person.jpeg"
+              alt="user"
+              height="50"
+              class="user"
+            />
+          </div>
+          <div class="username">
+            <span>Natan Winson</span>
+            <span>Software Engineer, 17</span>
+          </div>
+        </div>
+        <section class="middle-container">
+          <span id="animated_home">home</span>
+        </section>
+        <div class="right-container">
+          <form id="form" onsubmit="validateForm()" method="dialog">
+            <div style="font-size: 20px; font-weight: 600">Contact Us</div>
+            <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
+            <label for="nama">Your Name: </label>
+            <input
+              type="text"
+              id="nama"
+              placeholder="First and Last Name"
+              oninput="validateName()"
+              autocomplete="off"
+            />
+            <div id="nameError"></div>
+            <label for="email">Email Address: </label>
+            <input
+              type="text"
+              id="email"
+              placeholder="example@email.com"
+              oninput="validateEmail()"
+              autocomplete="off"
+            />
+            <div id="emailError"></div>
+            <label for="option">What are you insterested in: </label>
+            <select name="" id="option" onchange="validateSelect()">
+              <option value="">Select Option</option>
+              <option value="Car">Car</option>
+              <option value="Ship">Ship</option>
+              <option value="Airplane">Airplane</option>
+            </select>
+            <div id="selectError"></div>
+            <label for="submit"></label>
+            <input type="submit" value="DONE" />
+          </form>
+        </div>
+      </section>
+      <!-- <section class="benefit-container">
+        <h2>Why Join Us</h2>
+        <div class="features-container">
+          <div class="item-1">Fast And Reliable</div>
+          <div class="item-2">Cheap and Affordable</div>
+          <div class="item-3">Integrity Above Everything</div>
+        </div>
+      </section> -->
+      <section class="package-container"></section>
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

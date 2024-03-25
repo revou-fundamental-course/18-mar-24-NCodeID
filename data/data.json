@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "image": "assets/img/place.jpg",
+      "msg": "Text1"
+    },
+    {
+      "id": 1,
+      "image": "assets/img/place1.jpg",
+      "msg": "Text2"
+    },
+    {
+      "id": 1,
+      "image": "assets/img/place2.jpg",
+      "msg": "Text3"
+    }
+  ]
+}
