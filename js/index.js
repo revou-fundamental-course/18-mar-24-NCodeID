@@ -8,7 +8,7 @@ var l = slide.length;
 var interval = 8000;
 var set;
 
-window.onload = function () {
+window.onload = () => {
   initialize();
   slide[0].style.opacity = "1";
   for (var j = 0; j < l; j++) {
@@ -33,8 +33,15 @@ window.onload = function () {
       mobiles.classList.remove("glass");
     }
   });
-};
+  // Accordion
+  const accordionBtn = document.querySelectorAll(".accordion-wrapper");
 
+  accordionBtn.forEach((item) =>
+    item.addEventListener("click", () => {
+      item.classList.toggle("is_toggled")
+    })
+  )
+}
 function initialize() {
   if (autoplay === "true")
     set = setInterval(function () {
@@ -99,8 +106,10 @@ function validateName() {
 
   if (name === "") {
     errorMsg = "Name is required.";
+    document.getElementById("nama").style.color = "red";
   } else if (!nameRegex.test(name)) {
     errorMsg = "Terdapat angka atau symbol.";
+    document.getElementById("nama").style.color = "red";
   } else {
     errorMsg = "Berhasil";
     document.getElementById("nama").style.color = "black";
@@ -174,18 +183,8 @@ function validateForm() {
 }
 
 function correct() {
-  Swal.fire({
-    title: "Berhasil!",
-    text: "Form Telah Dikirim!",
-    icon: "success",
-    confirmButtonText: "Oke",
-  });
+  alert("Success");
 }
 function formValidWrong(errorMsg) {
-  Swal.fire({
-    icon: "error",
-    title: "Oops...",
-    text: "Something went wrong!",
-    footer: errorMsg,
-  });
+  alert(errorMsg);
 }

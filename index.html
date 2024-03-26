@@ -11,11 +11,19 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
       rel="stylesheet"
     />
+    <script
+      src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"
+      defer
+    ></script>
   </head>
   <body>
     <header class="header-container">
       <nav class="navbar-container">
-        <img src="assets/img/person.jpeg" alt="logo" width="50" height="50" />
+        <div class="logo-container">
+          <img src="assets/img/person.jpeg" alt="logo" width="50" height="50" />
+          <span class="logo-text">NCodeID</span>
+        </div>
+
         <ul class="list-wrapper">
           <li class="list-item"><a href="#home">Home</a></li>
           <li class="list-item"><a href="#our_packages">Our Package</a></li>
@@ -34,7 +42,7 @@
     </div>
     <main>
       <section class="page-title">
-        <h1>Your Trusted Travel Agent's</h1>
+        <h1>Your Trusted Hosting Platform</h1>
         <p id="home">Your happiness is our happiness</p>
       </section>
       <section class="home-container">
@@ -77,9 +85,6 @@
             <span>Software Engineer, 17</span>
           </div>
         </div>
-        <section class="middle-container">
-          <span id="animated_home">home</span>
-        </section>
         <div class="right-container">
           <form id="form" onsubmit="validateForm()" method="dialog">
             <div style="font-size: 20px; font-weight: 600">Contact Us</div>
@@ -91,23 +96,25 @@
               placeholder="First and Last Name"
               oninput="validateName()"
               autocomplete="off"
+              required
             />
             <div id="nameError"></div>
             <label for="email">Email Address: </label>
             <input
-              type="text"
+              type="email"
               id="email"
               placeholder="example@email.com"
               oninput="validateEmail()"
               autocomplete="off"
+              required
             />
             <div id="emailError"></div>
-            <label for="option">What are you insterested in: </label>
+            <label for="option">What package do you want: </label>
             <select name="" id="option" onchange="validateSelect()">
               <option value="">Select Option</option>
-              <option value="Car">Car</option>
-              <option value="Ship">Ship</option>
-              <option value="Airplane">Airplane</option>
+              <option value="Car">Starter</option>
+              <option value="Ship">Pro</option>
+              <option value="Airplane">Legend</option>
             </select>
             <div id="selectError"></div>
             <label for="submit"></label>
@@ -115,19 +122,268 @@
           </form>
         </div>
       </section>
-      <!-- <section class="benefit-container">
-        <h2>Why Join Us</h2>
-        <div class="features-container">
-          <div class="item-1">Fast And Reliable</div>
-          <div class="item-2">Cheap and Affordable</div>
-          <div class="item-3">Integrity Above Everything</div>
+      <section class="highlight-container">
+        <div class="image-container">
+          <img src="assets/img/teamwork.jpg" alt="teamwork" />
+          <div class="image-overlay"></div>
+          <div class="highlight-main">
+            <h1>Why Choose us ?</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis totam, ea quis repudiandae quidem eum minus
+              necessitatibus repellat similique esse natus autem architecto
+              tenetur! Tempore nesciunt commodi dolore officia ad?
+            </p>
+          </div>
         </div>
-      </section> -->
-      <section class="package-container"></section>
+        <ul class="highlight-wrapper" type="1">
+          <li class="highlight-item">
+            <box-icon
+              type="solid"
+              name="cart"
+              size="lg"
+              color="#ffffff"
+            ></box-icon>
+            <h3>Cepat dan Handal<br /></h3>
+          </li>
+          <li class="highlight-item">
+            <box-icon
+              type="solid"
+              name="credit-card"
+              size="lg"
+              color="#ffffff"
+            ></box-icon>
+            <h3>Harga Terjangkau</h3>
+          </li>
+          <li class="highlight-item">
+            <box-icon name="shield" size="lg" color="#ffffff"></box-icon>
+            <h3>Aman dan Terpercaya</h3>
+          </li>
+          <li class="highlight-item">
+            <box-icon
+              type="solid"
+              name="phone-call"
+              size="lg"
+              color="#ffffff"
+            ></box-icon>
+            <h3>Costumer Service 24/7</h3>
+          </li>
+        </ul>
+      </section>
+      <section class="about-us-container">
+        <h1>About-Us</h1>
+        <p>Know more about our company!</p>
+        <div class="about-us-wrapper">
+          <div class="about-detail">
+            <ul class="accordion-container">
+              <li class="accordion-wrapper is_toggled">
+                <div class="toggle">
+                  <box-icon
+                    class="chevron"
+                    name="chevron-right"
+                    color="white"
+                  ></box-icon>
+                  <span>Sejarah</span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  quas, corrupti tenetur distinctio harum voluptatem sequi.
+                  Eligendi odit animi culpa accusantium esse laudantium,
+                  officiis alias cum maiores rerum doloremque earum hic deleniti
+                  voluptatem a obcaecati vero vitae perferendis, iure voluptate
+                  repudiandae tenetur. Officiis esse assumenda consequuntur
+                  consequatur, doloremque excepturi voluptas?
+                </p>
+              </li>
+              <li class="accordion-wrapper">
+                <div class="toggle">
+                  <box-icon
+                    class="chevron"
+                    name="chevron-right"
+                    color="white"
+                  ></box-icon>
+                  <span>Layanan</span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis illum sequi odit. Magni omnis fugit voluptates unde
+                  quisquam cupiditate laudantium!
+                </p>
+              </li>
+              <li class="accordion-wrapper">
+                <div class="toggle">
+                  <box-icon
+                    class="chevron"
+                    name="chevron-right"
+                    color="white"
+                  ></box-icon>
+                  <span>Owner</span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis illum sequi odit. Magni omnis fugit voluptates unde
+                  quisquam cupiditate laudantium!
+                </p>
+              </li>
+              <li class="accordion-wrapper">
+                <div class="toggle">
+                  <box-icon
+                    class="chevron"
+                    name="chevron-right"
+                    color="white"
+                  ></box-icon>
+                  <span>Lokasi</span>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Facilis illum sequi odit. Magni omnis fugit voluptates unde
+                  quisquam cupiditate laudantium!
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="about-images-container">
+            <img class="about-images" src="assets/img/building.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="package-container">
+        <section class="page-title" id="our_packages">
+          <h1>Our Packages</h1>
+        </section>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-upper">
+              <div class="card-title">20% Off</div>
+              <div class="package">
+                <div class="package-title">Starter</div>
+                <p class="package-detail">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                  maiores.
+                </p>
+                <div class="package-pricing">Rp 15.000,-</div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <ul class="feature-wrapper">
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+              </ul>
+              <button><a href="#home">Contact</a></button>
+            </div>
+          </div>
+          <div class="card card-best">
+            <div class="card-upper">
+              <div class="card-title">Best Seller</div>
+              <div class="package">
+                <div class="package-title">Pro</div>
+                <p class="package-detail">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                  maiores.
+                </p>
+                <div class="package-pricing">Rp 30.000,-</div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <ul class="feature-wrapper">
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+              </ul>
+              <button><a href="#home">Contact</a></button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <div class="card-title">Best Offer</div>
+              <div class="package">
+                <div class="package-title">Legend</div>
+                <p class="package-detail">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                  maiores.
+                </p>
+                <div class="package-pricing">Rp 50.000,-</div>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <ul class="feature-wrapper">
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+                <li>
+                  <img src="assets/img/check.svg" alt="centang" />Lorem ipsum
+                  dolor sit amet.
+                </li>
+              </ul>
+              <button><a href="#home">Contact</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="call-container">
+        <img src="assets/img/waves.svg" alt="wave" />
+        <div class="call-wrapper">
+          <h1 class="call-title">
+            Get Free Hosting Tips & Tricks Delivered to Your <br /><span
+              >Inbox!</span
+            >
+          </h1>
+          <form method="get" class="cta-container">
+            <input
+              type="email"
+              id="cta_newsletter"
+              placeholder="Masukkan Email"
+              required
+            />
+            <input type="submit" value="Submit" />
+          </form>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus,
+            architecto?
+          </p>
+        </div>
+      </section>
     </main>
-
     <script src="js/index.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
