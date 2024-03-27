@@ -5,7 +5,7 @@ var autoplay = document
   .getElementsByClassName("banner-container")[0]
   .getAttribute("data-autoplay");
 var l = slide.length;
-var interval = 8000;
+var interval = 3500;
 var set;
 
 window.onload = () => {
@@ -108,12 +108,15 @@ function validateName() {
 
   if (name === "") {
     errorMsg = "Name is required.";
+    document.getElementById("nama").style.border = "3px solid red";
     document.getElementById("nama").style.color = "red";
   } else if (!nameRegex.test(name)) {
     errorMsg = "Terdapat angka atau symbol.";
+    document.getElementById("nama").style.border = "3px solid red";
     document.getElementById("nama").style.color = "red";
   } else {
     errorMsg = "Berhasil";
+    document.getElementById("nama").style.border = "3px solid black";
     document.getElementById("nama").style.color = "black";
   }
 
@@ -127,10 +130,16 @@ function validateEmail() {
 
   if (email === "") {
     errorMsg = "Email harus di isi";
+    document.getElementById("email").style.color = "red";
+    document.getElementById("email").style.border = "3px solid red";
+
   } else if (!emailRegex.test(email)) {
+    document.getElementById("email").style.border = "3px solid red";
+    document.getElementById("email").style.color = "red";
     errorMsg = "Bukan format email.";
   } else {
     errorMsg = "Berhasil";
+    document.getElementById("email").style.border = "3px solid black";
     document.getElementById("email").style.color = "black";
   }
 
