@@ -10,7 +10,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://res.cloudinary.com/dvfjuiyvx/image/upload/v1711498503/screencapture-revou-fundamental-course-github-io-18-mar-24-NCodeID-2024-03-26-21_52_30_tp8hyh.png" alt="project-screenshot" width="5000px" height="400/">
+<img src="https://res.cloudinary.com/dvfjuiyvx/image/upload/v1711498503/screencapture-revou-fundamental-course-github-io-18-mar-24-NCodeID-2024-03-26-21_52_30_tp8hyh.png" alt="project-screenshot" width="5000px" height="4000px/">
 
   
   
