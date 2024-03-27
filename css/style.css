@@ -285,6 +285,7 @@ input:invalid {
 .slide img {
     background-size: contain;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .quotes {
@@ -453,6 +454,7 @@ input:invalid {
     align-items: center;
     border-radius: 16px;
     overflow: hidden;
+    
 }
 
 .highlight-container .image-container {
@@ -565,11 +567,12 @@ input:invalid {
 
 .about-us-container h1 {
     font-size: 40px;
-    margin: 10px 0px;
+    margin: 10px 20px;
 }
 
 .about-us-container p {
     color: var(--typhography-color-light);
+    margin: 0px 20px;
 }
 
 .about-us-container li {
@@ -595,15 +598,13 @@ input:invalid {
     max-height: 55px;
     overflow: hidden;
     user-select: none;
-    transition: all .5s;
+    
 }
 
 .accordion-wrapper.is_toggled {
-    max-height: unset;
-    min-height: 100px;
+    max-height: 1000px;
     border: 1px solid #000;
-
-
+    margin-bottom: 20px;
 }
 
 .accordion-wrapper.is_toggled .chevron {
@@ -614,14 +615,13 @@ input:invalid {
 
 .accordion-wrapper p {
     opacity: 0;
-    transition: .5s ease;
     padding: 10px 20px;
-
 }
 
 .accordion-wrapper.is_toggled p {
     padding: 10px 20px;
     opacity: 1;
+    
 }
 
 .accordion-wrapper span {
@@ -889,8 +889,9 @@ input:invalid {
     .highlight-container {
         flex-direction: column;
         border-radius: 0;
-
+        padding: 0px 10px;
         min-height: 100vh;
+        font-size: 14px;
     }
 
     .image-container {
