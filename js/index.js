@@ -41,6 +41,8 @@ window.onload = () => {
       item.classList.toggle("is_toggled")
     })
   )
+
+  keAtas()
 }
 function initialize() {
   if (autoplay === "true")
@@ -187,4 +189,11 @@ function correct() {
 }
 function formValidWrong(errorMsg) {
   alert(errorMsg);
+}
+
+function keAtas(){
+  const topBtn = document.getElementById("toTop")
+  topBtn.addEventListener("click", ()=>{
+    window.scrollTo(top)
+  })
 }
