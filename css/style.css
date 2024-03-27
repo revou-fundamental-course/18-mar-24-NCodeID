@@ -541,7 +541,7 @@ input:invalid {
     position: relative;
     box-sizing: border-box;
     min-height: 100vh;
-    margin: 80px 0;
+    margin-top: 80px;
     color: var(--typhography-color);
 }
 
