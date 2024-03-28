@@ -208,11 +208,25 @@ function validateForm() {
 }
 
 function correct() {
+  document.getElementById("modal").style = "display: flex";
+  document.getElementById("pop-up-title").innerHTML = "Submit berhasil";
+  document.getElementById("pop-up-status").innerHTML = "<box-icon  name='check' color='#2ecc71' size='lg'></box-icon>" ;
+  document.getElementById("errorMsg").innerHTML = "Telah di submit";
+  document.getElementById("errorMsg").style = "color: #2ecc71"
 
-  alert("Success");
+  setTimeout(function () {
+    document.getElementById("modal").style = "display: none";
+  }, 2000);
 }
 function formValidWrong(errorMsg) {
-  alert(errorMsg);
+  document.getElementById("modal").style = "display: flex";
+  document.getElementById("pop-up-title").innerHTML = "Submit tidak berhasil";
+  document.getElementById("pop-up-status").innerHTML = "<box-icon  name='error-circle' color='#e74c3c' id='error-icon-0' size='lg'></box-icon>" ;
+  document.getElementById("errorMsg").innerHTML = errorMsg;
+
+  setTimeout(function () {
+    document.getElementById("modal").style = "display: none";
+  }, 2000);
 }
 
 function keAtas() {

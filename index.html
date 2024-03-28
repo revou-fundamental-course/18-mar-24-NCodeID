@@ -135,7 +135,7 @@
             </div>
             <small  id="emailError"></small>
             <label for="option">What package do you want: </label>
-            <select name="" id="option" onchange="validateSelect()">
+            <select name="" id="option" onchange="validateSelect()" >
               <option value="">Select Option</option>
               <option value="Car">Starter</option>
               <option value="Ship">Pro</option>
@@ -412,6 +412,18 @@
     </main>
     <div id="toTop">
       <box-icon class="chevron" name="chevron-up" color="white"></box-icon>
+    </div>
+    <div class="modal-pop-up" id="modal">
+      <div id="pop-up">
+        <div id="pop-up-title">
+          Ini title
+        </div>
+        <div id="pop-up-status">
+        </div>
+        <div id="errorMsg">
+          ini error
+        </div>
+      </div>
     </div>
     <script src="js/index.js"></script>
   </body>
