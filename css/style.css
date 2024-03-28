@@ -430,6 +430,7 @@ small{
     gap: 2rem;
     padding-top: 100px;
     transition: .5s ease;
+    z-index: 9999999;
 }
 
 .navbar-handphone a {

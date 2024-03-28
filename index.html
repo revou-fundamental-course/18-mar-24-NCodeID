@@ -17,6 +17,7 @@
     ></script>
   </head>
   <body>
+    <!-- Navbar -->
     <header class="header-container">
       <nav class="navbar-container">
         <div class="logo-container">
@@ -41,11 +42,15 @@
       <a href="#call_us">Call Us</a>
     </div>
     <main>
+      <!-- Hero -->
       <section class="page-title">
         <h1>Your Trusted Hosting Platform</h1>
         <p id="home">Your happiness is our happiness</p>
       </section>
+      <!-- Hero -->
+      <!-- Home -->
       <section class="home-container">
+        <!-- Banner auto slide -->
         <div class="left-container">
           <div class="banner-container" data-autoplay="true">
             <div class="arrow arrow-left" onclick="prev()">
@@ -82,6 +87,8 @@
             </div>
             <div class="dots_container" id="indicator"></div>
           </div>
+          <!-- End Banner Auto Slide -->
+          <!-- Left Content -->
           <span class="quotes">
             &#34;Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Nulla, quia delectus dolorum amet sed aspernatur animi ab expedita.
@@ -99,27 +106,36 @@
             <span>Natan Winson</span>
             <span>Software Engineer, 17</span>
           </div>
-          <hr>
+          <hr />
         </div>
+        <!-- End Left Content -->
+        <!-- Form  -->
         <div class="right-container">
           <form id="form" onsubmit="validateForm()" method="dialog">
             <div style="font-size: 20px; font-weight: 600">Contact Us</div>
             <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
             <label for="nama">Your Name: </label>
             <div class="input-container">
-              
               <input
-              type="text"
-              id="nama"
-              placeholder="First and Last Name"
-              oninput="validateName()"
-              autocomplete="off"
-              required
+                type="text"
+                id="nama"
+                placeholder="First and Last Name"
+                oninput="validateName()"
+                autocomplete="off"
+                required
               />
-              <box-icon  name='error-circle' color='#e74c3c' id="error-icon-0" ></box-icon>
-              <box-icon  name='check' color='#2ecc71' id="success-icon-0" ></box-icon>
+              <box-icon
+                name="error-circle"
+                color="#e74c3c"
+                id="error-icon-0"
+              ></box-icon>
+              <box-icon
+                name="check"
+                color="#2ecc71"
+                id="success-icon-0"
+              ></box-icon>
             </div>
-            <small  id="nameError"></small>
+            <small id="nameError"></small>
             <label for="email">Email Address:</label>
             <div class="input-container">
               <input
@@ -130,12 +146,20 @@
                 autocomplete="off"
                 required
               />
-              <box-icon name='error-circle' color='#e74c3c' id="error-icon-1"></box-icon>
-              <box-icon name='check' color='#2ecc71' id="success-icon-1"></box-icon>
+              <box-icon
+                name="error-circle"
+                color="#e74c3c"
+                id="error-icon-1"
+              ></box-icon>
+              <box-icon
+                name="check"
+                color="#2ecc71"
+                id="success-icon-1"
+              ></box-icon>
             </div>
-            <small  id="emailError"></small>
+            <small id="emailError"></small>
             <label for="option">What package do you want: </label>
-            <select name="" id="option" onchange="validateSelect()" >
+            <select name="" id="option" onchange="validateSelect()">
               <option value="">Select Option</option>
               <option value="Car">Starter</option>
               <option value="Ship">Pro</option>
@@ -147,6 +171,8 @@
           </form>
         </div>
       </section>
+      <!-- End of Form -->
+      <!-- Highlight -->
       <section class="highlight-container">
         <div class="image-container">
           <img loading="lazy" src="assets/img/teamwork.jpg" alt="teamwork" />
@@ -195,6 +221,8 @@
           </li>
         </ul>
       </section>
+      <!-- End Of Highlight -->
+      <!-- About Us -->
       <section class="about-us-container">
         <h1>About-Us</h1>
         <p>Know more about our company!</p>
@@ -272,6 +300,8 @@
           </div>
         </div>
       </section>
+      <!-- End About Us -->
+      <!-- Package / Pricing -->
       <section class="package-container">
         <section class="page-title" id="our_packages">
           <h1>Our Packages</h1>
@@ -385,6 +415,8 @@
           </div>
         </div>
       </section>
+      <!-- Package / Pricing -->
+      <!-- CallToAction -->
       <section class="call-container">
         <img src="assets/img/waves.svg" alt="wave" />
         <div class="call-wrapper">
@@ -409,22 +441,22 @@
           </footer>
         </div>
       </section>
+      <!-- End Of CallToAction -->
+      
     </main>
     <div id="toTop">
       <box-icon class="chevron" name="chevron-up" color="white"></box-icon>
     </div>
+    <!-- PopUp -->
     <div class="modal-pop-up" id="modal">
       <div id="pop-up">
-        <div id="pop-up-title">
-          Ini title
-        </div>
-        <div id="pop-up-status">
-        </div>
-        <div id="errorMsg">
-          ini error
-        </div>
+        <div id="pop-up-title">Ini title</div>
+        <div id="pop-up-status"></div>
+        <div id="errorMsg">ini error</div>
       </div>
     </div>
+    <!-- End Of PopUp -->
+
     <script src="js/index.js"></script>
   </body>
 </html>

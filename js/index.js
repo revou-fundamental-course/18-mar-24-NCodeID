@@ -42,7 +42,7 @@ window.onload = () => {
     })
   );
 
-  keAtas();
+  scrollToTop();
 };
 function initialize() {
   if (autoplay === "true")
@@ -229,7 +229,7 @@ function formValidWrong(errorMsg) {
   }, 2000);
 }
 
-function keAtas() {
+function scrollToTop() {
   const topBtn = document.getElementById("toTop");
   topBtn.addEventListener("click", () => {
     window.scrollTo(top);
