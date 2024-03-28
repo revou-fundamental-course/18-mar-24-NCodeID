@@ -180,19 +180,39 @@ section {
 
 .right-container label {
     display: block;
-    margin-top: 1.4rem;
+    margin-top: 1.1rem;
 }
 
 .right-container input {
+    position: relative;
     width: 95%;
     height: 45px;
     padding-left: 10px;
     outline: none;
+    border-radius: 12px;
 }
 
-.right-container input::placeholder{
-    color: red;
+.right-container box-icon{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    visibility: hidden  ;
 }
+
+small{
+    padding-left: 5px;
+}
+.visible{
+    visibility: visible !important;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .right-container input[type=text] {
     border: 3px solid rgb(158, 153, 153);
 
@@ -325,6 +345,7 @@ section {
 
 .package-container {
     min-height: 100vh;
+    margin-bottom: 4rem;
 }
 
 .features-container {
@@ -768,6 +789,7 @@ section {
 .call-container img {
     position: absolute;
     right: 0;
+    top: 0;
     width: 100%;
 }
 
@@ -837,12 +859,9 @@ section {
     border-radius: 50%;
     cursor: pointer;
 }
-.error{
-    font-size: 12px;
-    padding-left: 5px;
-}
+
 /* Media Queries */
-@media screen and  (max-width: 1024px) and (mid-width: 800px)  {
+@media screen and (max-width: 1024px) and (mid-width: 800px) {
     .package-container {
         min-height: 100%;
         margin-bottom: 200px;
@@ -868,7 +887,7 @@ section {
     }
 
     .card-container {
-        display: grid !important ;
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
@@ -883,14 +902,17 @@ section {
     .card-best {
         grid-area: card-mid;
         min-width: 400px;
-        margin-left: 50% ;
+        margin-left: 50%;
         transform: translateX(-50%);
     }
-    .card{
+
+    .card {
         min-width: 400px;
         min-height: 420px;
     }
+    
 }
+
 @media only screen and (max-width: 900px) {
     .home-container {
         flex-direction: column;
@@ -905,7 +927,7 @@ section {
         width: 100%;
         padding: 0px 20px;
     }
-
+    
     .right-container {
         width: 100%;
         display: flex;
@@ -957,12 +979,14 @@ section {
     }
 
     .highlight-main {
+        position: relative;
         flex: 1;
         height: 100%;
         width: 100vw;
         padding: 0px;
+        
     }
-
+    
     .highlight-wrapper {
         width: 100%;
         margin: 0px;
@@ -976,9 +1000,6 @@ section {
         object-fit: cover;
     }
 
-    .highlight-container .highlight-main p {
-        padding: 0px;
-    }
 
     .card-container {
         box-sizing: content-box;
@@ -990,6 +1011,7 @@ section {
         flex-wrap: nowrap;
         gap: 0px;
     }
+    
 
     .card {
         min-width: 100%;
@@ -1018,7 +1040,8 @@ section {
     .logo-text {
         color: #fff;
     }
-    .card-best{
+
+    .card-best {
         margin-left: 0;
         transform: unset;
     }
@@ -1045,5 +1068,3 @@ section {
     }
 
 }
-
-

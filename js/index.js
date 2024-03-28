@@ -38,12 +38,12 @@ window.onload = () => {
 
   accordionBtn.forEach((item) =>
     item.addEventListener("click", () => {
-      item.classList.toggle("is_toggled")
+      item.classList.toggle("is_toggled");
     })
-  )
+  );
 
-  keAtas()
-}
+  keAtas();
+};
 function initialize() {
   if (autoplay === "true")
     set = setInterval(function () {
@@ -103,44 +103,58 @@ function prev() {
 
 function validateName() {
   var name = document.getElementById("nama").value;
+  document.getElementById("error-icon-0").classList.add("visible");
+  document.getElementById("success-icon-0").classList.remove("visible");
   var nameRegex = /^[a-z A-Z]*$/;
   var errorMsg = "";
+  document.getElementById("nameError").style = "color:#e74c3c";
+  document.getElementById("nama").classList.add("error");
 
   if (name === "") {
     errorMsg = "Name is required.";
-    document.getElementById("nama").style.border = "3px solid red";
-    document.getElementById("nama").style.color = "red";
+    document.getElementById("nama").style.borderColor = "#e74c3c";
+    document.getElementById("nama").style.color = "#e74c3c";
   } else if (!nameRegex.test(name)) {
     errorMsg = "Terdapat angka atau symbol.";
-    document.getElementById("nama").style.border = "3px solid red";
-    document.getElementById("nama").style.color = "red";
+    document.getElementById("nama").style.borderColor = "#e74c3c";
+    document.getElementById("nama").style.color = "#e74c3c";
   } else {
     errorMsg = "Berhasil";
-    document.getElementById("nama").style.border = "3px solid black";
+    document.getElementById("nama").style.borderColor = "#2ecc71";
     document.getElementById("nama").style.color = "black";
+    document.getElementById("nameError").style = "color: #fff";
+    document.getElementById("error-icon-0").classList.remove("visible");
+    document.getElementById("success-icon-0").classList.add("visible");
   }
 
-  document.getElementById("nameError").innerHTML = errorMsg; // Update error message
+  document.getElementById("nameError").innerHTML = errorMsg;
 }
 
 function validateEmail() {
   var email = document.getElementById("email").value;
-  var errorMsg = "";
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  document.getElementById("error-icon-1").classList.add("visible");
+  document.getElementById("success-icon-1").classList.remove("visible");
+  var errorMsg = "";
+  var emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  document.getElementById("emailError").style = "color:#e74c3c ";
   if (email === "") {
     errorMsg = "Email harus di isi";
-    document.getElementById("email").style.color = "red";
-    document.getElementById("email").style.border = "3px solid red";
-
+    document.getElementById("email").style.color = "#e74c3c";
+    document.getElementById("email").style.borderColor = "#e74c3c";
   } else if (!emailRegex.test(email)) {
-    document.getElementById("email").style.border = "3px solid red";
-    document.getElementById("email").style.color = "red";
+    document.getElementById("email").style.borderColor = "#e74c3c";
+    document.getElementById("email").style.color = "#e74c3c";
+    document.getElementBy;
     errorMsg = "Bukan format email.";
   } else {
     errorMsg = "Berhasil";
-    document.getElementById("email").style.border = "3px solid black";
+    document.getElementById("email").style.borderColor = "#2ecc71";
     document.getElementById("email").style.color = "black";
+    document.getElementById("emailError").style = "color: #fff";
+    document.getElementById("error-icon-1").classList.remove("visible");
+    document.getElementById("success-icon-1").classList.add("visible");
   }
 
   document.getElementById("emailError").innerHTML = errorMsg;
@@ -166,17 +180,17 @@ function validateForm() {
 
   if (name === "") {
     errorMsg += "Name is required. \n";
-    document.getElementById("nama").style.color = "red";
+    document.getElementById("nama").style.color = "#e74c3c";
   } else if (!/^[a-z A-Z]*$/.test(name)) {
     errorMsg += "Angka dan symbol tidak diperbolehkan! \n";
-    document.getElementById("nama").style.color = "red";
+    document.getElementById("nama").style.color = "#e74c3c";
   }
   if (email === "") {
     errorMsg += "Email is required. \n";
-    document.getElementById("email").style.color = "red";
+    document.getElementById("email").style.color = "#e74c3c";
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errorMsg += "Invalid email format. \n";
-    document.getElementById("email").style.color = "red";
+    document.getElementById("email").style.color = "#e74c3c";
   }
   if (select == null) {
     errorMsg += "Opsi kosong!";
@@ -194,15 +208,16 @@ function validateForm() {
 }
 
 function correct() {
+
   alert("Success");
 }
 function formValidWrong(errorMsg) {
   alert(errorMsg);
 }
 
-function keAtas(){
-  const topBtn = document.getElementById("toTop")
-  topBtn.addEventListener("click", ()=>{
-    window.scrollTo(top)
-  })
+function keAtas() {
+  const topBtn = document.getElementById("toTop");
+  topBtn.addEventListener("click", () => {
+    window.scrollTo(top);
+  });
 }
