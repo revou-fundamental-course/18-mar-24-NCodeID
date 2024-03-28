@@ -124,8 +124,11 @@ section {
 .home-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin: 80px 0px;
     min-height: 50vh;
+}
+.home-container hr{
+    margin-top: 2rem;
 }
 
 .left-container {
@@ -791,6 +794,7 @@ small{
     right: 0;
     top: 0;
     width: 100%;
+    z-index: 99;
 }
 
 .call-wrapper {
